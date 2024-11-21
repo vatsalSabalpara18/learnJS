@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2,
+      h1,
+      span#score {
+        text-align: center;
+      }
+      div#question-container {
+        width: 25%;
+        margin: 5px auto;
+      }
+      div#btn {
+        display: flex;
+        justify-content: end;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Quiz</h2>
+    <div id="question-container">
+      <div>Individual Question Timer: <span id="timer">1:00</span></div>
+      <div id="sub-question-container">
+        <div>
+          Question
+          <span id="question-number">1</span>.
+        </div>
+        <span id="question">what is time today?.</span><br />
+        <div id="option-container"></div>
+        <div id="btn">
+          <button id="submit-question" onclick="handleClick()">Next</button>
+        </div>
+      </div>
+    </div>
+    <span id="score"></span>
+    <!-- <div id="quiz-container"></div>
+    <button onclick="handleSubmitQuiz()">Submit Quiz</button> <br>
+    <span id="score"></span>
+    <script src="index.js"></script> -->
+    <script src="quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Form validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="contactForm" onsubmit="return validateForm()" action="" method="post">
+        <h2>Application Form</h2>
+        <div class="row">
+            <p>Full Name</p>
+            <input type="text" name="name">
+            <span class="error" id="nameErr"></span>
+        </div>
+        <div class="row">
+            <p>Email Address</p>
+            <input type="text" name="email">
+            <span class="error" id="emailErr"></span>
+        </div>
+        <div class="row">
+            <p>Mobile Number</p>
+            <input type="text" name="mobile" maxlength="10">
+            <span class="error" id="mobileErr"></span>
+        </div>
+        <div class="row">
+            <p>Country</p>
+            <select name="country">
+                <option value="0">Select</option>
+                <option value="au">Australia</option>
+                <option value="in">India</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+            <span class="error" id="countryErr"></span>
+        </div>
+        <div class="row">
+            <p>Gender</p>
+            <span class="error" id="genderErr"></span>
+            <div class="form-inline">
+                <p><input type="radio" name="gender" value="male"> Male</p>
+                <p><input type="radio" name="gender" value="female"> Female</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <p>Hobbies <i>(Optional)</i></p>
+            <span class="error" id="hobbyErr"></span>
+            <div class="form-inline">
+                <p><input type="checkbox" name="hobbies" value="sports"> Sports</p>
+                <p><input type="checkbox" name="hobbies" value="movies"> Movies</p>
+                <p><input type="checkbox" name="hobbies" value="music"> Music</p>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <script src="JS/formValidation.js"></script>
+</body>
+
+</html>

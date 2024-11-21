@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        color: whitesmoke;
+        background-color: #ffbe98;
+        display: flex;
+        justify-content: center;
+      }
+      table {
+        border-collapse: collapse;
+        border: 1px solid white;
+        width: 60%;
+        color: aliceblue;
+        background-color: #125b9a;
+      }
+      tr,
+      th,
+      td {
+        text-align: center;
+        border: 1px solid white;
+        color: aliceblue;
+        background-color: #125b9a;
+        /* border: none; */
+      }
+      h1 {
+        text-align: center;
+        color: #125b9a;
+      }
+      div#root {
+        height: 60%;
+        width: 60%;
+      }
+      div.table,
+      div.form {
+        display: flex;
+        justify-content: center;
+        background-color: #f05a7e;
+        padding: 2%;
+        border-radius: 10px;
+        /* height: 30%;
+            width: 30%; */
+      }
+      div.form {
+        height: 30%;
+        width: 20%;
+        margin: 10px auto;
+      }
+      /* div.formContent {
+        
+      } */
+      div.table {
+        height: 100%;
+        width: 100%;
+        margin: 10px auto;
+      }
+      div.btn {
+        display: flex;
+        justify-content: center;
+      }
+      input#submit {
+        background-color: #0b8494;
+        color: aliceblue;
+        height: 30px;
+        width: 100px;
+        border-radius: 10px;
+      }
+      input#employeeName,
+      input#employeeSalary,
+      input#empJoiningDate {
+        background-color: #ffbe98;
+        height: 20px;
+        width: 80%;
+        border: none;
+        text-align: center;
+      }
+      span#empNameErr,
+      span#salaryErr,
+      span#joiningdateErr {
+        color: darkred;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Employee Management</h1>
+      <div class="form">
+        <form action="" onsubmit="handleSubmit()">
+          <div class="formContent">
+            Employee Name:
+            <input
+              type="text"
+              name="employeeName"
+              id="employeeName"
+              onfocus="handleNameChange()"
+              onchange="handleNameChange()"
+            />
+            <span id="empNameErr"></span>
+            <br /><br />
+            Employeed Salary:
+            <input
+              type="number"
+              name="employeeSalary"
+              id="employeeSalary"
+              onfocus="handleSalaryChange()"
+              onchange="handleSalaryChange()"
+            />
+            <span id="salaryErr"></span>
+            <br /><br />
+            Employee joining Date:
+            <input
+              type="date"
+              name="empJoiningDate"
+              id="empJoiningDate"
+              onfocus="handleDateChange()"
+              onchange="handleDateChange()"
+            />
+            <span id="joiningdateErr"></span>
+          </div>
+          <br />
+          <div class="btn">
+            <input type="submit" value="Add Employee" id="submit" />
+          </div>
+        </form>
+      </div>
+      <br />
+      <input type="text" name="search" id="search" placeholder="search...." onkeydown="handleSearchSort()" onkeyup="handleSearchSort()">
+      <select name="sort" id="sort" onchange="handleSearchSort()">
+        <option>--Select Sort--</option>
+        <option value="az">Name A to Z</option>
+        <option value="za">Name Z to A</option>
+        <option value="lh">Salary low-high</option>
+        <option value="hl">Salary high-low</option>
+      </select>
+      <div class="table">
+        <table border="1">
+          <thead>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>Salary</th>
+            <th>DateOfjoining</th>
+            <th>Action</th>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

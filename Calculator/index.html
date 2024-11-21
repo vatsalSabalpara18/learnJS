@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    table{
+        width: 20%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    h1{
+        margin-bottom: 8px;
+    }
+    div#root {
+      width: 15%;
+      margin: 5px auto;
+      padding: 5px;
+      text-align: center;
+      background-color: aqua;
+    }
+    div.btn,
+    div.bt1,
+    div.btn2,
+    div.btn3,
+    div.btn4 {
+      margin: 5px;
+    }
+    button {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      font-weight: 700;
+    }
+    button#zero{
+        width: 65px;
+    }
+    button#equal{
+        height: 64px;
+    }
+    input#field{
+      height: 50px;
+      width: 163px;
+      background-color: antiquewhite;
+      font-weight: 700;
+      font-size: 30px;
+      border-radius: 5px;
+    }
+
+  </style>
+  <body>
+    <div id="root">
+      <h1>Calculator</h1>
+      <input type="text" name="field" id="field" onchange="handleValidation()"/><br />
+      <table>
+        <tr>
+          <td><button id="C" onclick="handleClear()">C</button></td>
+          <td><button id="B" onclick="handleBackSpace()">B</button></td>
+          <td><button id="P/N" onclick="handlePositiveNagative()">+/-</button></td>
+          <td><button id="divide" onclick="handleOperation()">/</button></td>
+          <td><button id="multiplication" onclick="handleOperation()">X</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="handleNumber()">7</button></td>
+            <td><button onclick="handleNumber()">8</button></td>
+            <td><button onclick="handleNumber()">9</button></td>
+            <td><button onclick="handleOperation()">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="handleNumber()">4</button></td>
+            <td><button onclick="handleNumber()">5</button></td>
+            <td><button onclick="handleNumber()">6</button></td>
+            <td><button onclick="handleOperation()">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="handleNumber()">1</button></td>
+            <td><button onclick="handleNumber()">2</button></td>
+            <td><button onclick="handleNumber()">3</button></td>
+            <td rowspan="2"><button id="equal" onclick="handleEqual()">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="zero" onclick="handleNumber()">0</button></td>
+            <td><button onclick="handleDecimal()">.</button></td>
+        </tr>
+      </table>
+    <script src="index.js"></script>
+  </body>
+</html>

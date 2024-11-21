@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Management</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: #d1e9f6;
+        font-weight: 700;
+        color: #180161;
+      }
+
+      table {
+        border-collapse: collapse;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      h1 {
+        color: #1A4870;
+      }
+      input, select{
+        background-color: #D1E9F6;
+        color: #1F316F;
+        border: none;
+        border-radius: 10px;
+        height: 25px;
+        width: 185px;
+        font-size: large;
+      }
+      input#edit, input#delete{
+        width: 65px;
+        background-color: #1F316F;
+        color: #D1E9F6;
+      }
+
+      tr,
+      th,
+      td {
+        border: 2px solid black;
+        text-align: center;
+        font-weight: 700;
+        font-size: large;
+      }
+
+      form {
+        width: 69%;
+        margin: 2px auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      div#root {
+        height: fit-content;
+        width: 100%;
+        margin: 2px auto;
+      }
+
+      div.table,
+      div.form {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+      }
+      
+      div.form {
+        width: 20%;
+        padding: 25px;
+        margin: 1px auto;
+        background-color: #5b99c2;
+        border-radius: 20px;
+      }
+      div.table{
+        width: 80%;
+        margin: 1px auto;
+        padding: 10px;
+        border-radius: 20px;
+      }
+
+      div.btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      span#appoDateErr,
+      span#treatmentErr,
+      span#patientPhoneNoErr,
+      span#patientNameErr {
+        color: rgb(255, 32, 32);
+        font-weight: 700;
+        font-size: smaller;
+      }
+
+      div#Dates {
+        width: 50%;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <h1>Patient Information</h1>
+      <div class="form">
+        <form action="" onsubmit="handleSubmit()">
+          <div class="pName">
+            Patient Name:
+            <input
+              type="text"
+              name="patientName"
+              id="patientName"
+              placeholder="Enter Patient Name"
+            /><br />
+          </div>
+          <span id="patientNameErr"></span><br />
+          <div class="pPhoneNo">
+            Patient Phone Number:
+            <input
+              type="tel"
+              name="patientPhoneNo."
+              id="patientPhoneNo"
+              placeholder="Enter Patient PhoneNo."
+            /><br />
+          </div>
+          <span id="patientPhoneNoErr"></span><br />
+          <div class="pTreatment">
+            Patient Treatment:
+            <select
+              name="treatment"
+              id="treatment"
+              aria-placeholder="Select Treatment"
+            >
+              <option>--select Treatment--</option>
+              <option value="Teeth Cleanings">Teeth Cleanings</option>
+              <option value="Fillings">Fillings</option>
+              <option value="Root Canal">Root Canal Treatment</option>
+              <option value="RCT + Cover">RCT + Cover</option>
+              <option value="Braces/Invisalign">
+                Braces/Invisalign
+              </option></select
+            ><br /><span id="treatmentErr"></span><br />
+          </div>
+          <div class="pAppoDate">
+            Appoinment Date:
+            <input type="date" name="appoDate" id="appoDate" /><br /><span
+              id="appoDateErr"
+            ></span
+            ><br />
+          </div>
+          <div class="btn">
+            <input type="submit" value="Add Patient" id="submit" />
+          </div>
+        </form>
+      </div>
+      <br />
+      <div class="table">
+        <table border="1">
+          <thead>
+            <th>Sr No.</th>
+            <th>Patient Name</th>
+            <th>Patient PhoneNo.</th>
+            <th>Patient Treatment</th>
+            <th>Patient Appointment Date</th>
+            <th>Treatment Costing</th>
+            <th>Action</th>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

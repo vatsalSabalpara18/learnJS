@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Task</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            width: 60%;
+        }
+        tr, th, td {
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="handleSubmit()">
+        Enter the TO-DO 
+        <input type="text" name="todo" id="todo">
+        <input type="submit" value="Add TODO">
+    </form>
+    <br>
+    <label for="order">Select Display Order</label>
+    <select name="order" id="order" onchange="handleChange()">
+        <option>selet Order</option>
+        <option value="0">A-Z</option>
+        <option value="1">Z-A</option>
+    </select>
+    <br><br>
+    <table border="1">
+        <thead>
+            <th>ToDo list</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <script src="js/arraytask.js"></script>
+</body>
+</html>

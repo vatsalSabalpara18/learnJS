@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events</title>
+  </head>
+  <body>
+    <h1 onclick="handleClick()">Hello</h1>
+    <h1 onmouseover="handleOver()">Hello MouseOver</h1>
+    <h1 onmouseout="handleOut()">Hello MouseOut</h1>
+    <h1 onmousedown="handledown()">Hello MouseDown</h1>
+    <h1 onmouseup="handleUp()">Hello MouseUp</h1>
+    <h1 onmousemove="handleMove()">Hello MouseMove</h1>
+    <form action="" onsubmit="handleSubmit()">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Name"
+        onkeydown="handleKeyDown()"
+        onfocus="handleFocus()"
+        onblur="handleBlur()"
+      />
+      <input
+        type="text"
+        name="age"
+        id="age"
+        placeholder="Enter Age"
+        onkeyup="handleKeyUp()"
+      />
+      <select name="country" id="country" onchange="handleChange()">
+        <option value="0">--Select Option--</option>
+        <option value="In">India</option>
+        <option value="ca">Canada</option>
+      </select>
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="JS/events.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Percentage And Garde</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        th,tr,td {
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="handlePer()">
+        <input type="text" name="rollno" id="rollno" placeholder="Enter Your Roll No.">
+        <br><br>
+        <input type="text" name="std" id="std" placeholder="Enter Your Standard">
+        <br><br>
+        <input type="text" name="per" id="per" placeholder="Enter Your Percentage">
+        <br><br>
+        <input type="submit">
+    </form>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Roll No.</th>
+            <th>Standard</th>
+            <th>Percentage</th>
+            <th>Garde</th>
+        </tr>
+        <tr id="tableRow">
+            <td id="rollnoVal"></td>
+            <td id="stdVal"></td>
+            <td id="perVal"></td>
+            <td id="grade"></td>
+        </tr>
+    </table>
+
+    <script src="JS/percentage.js"></script>
+</body>
+</html>

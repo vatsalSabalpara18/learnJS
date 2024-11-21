@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Budget App</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: #D7C3F1;
+    }
+
+    table {
+        border-collapse: collapse;
+        border: 2px solid black;
+        width: 80%;
+    }
+    input {
+        border-radius: 10px;
+        height: 23px;
+    }
+
+    tr,
+    th,
+    td {
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    form {
+        width: 90%;
+        margin: 1px auto;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: #0D7C66;
+    }
+
+    div.budget,
+    div.expenses,
+    div.displayAMT {
+        width: 15%;
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #BDE8CA;
+
+    }
+
+    div.expenseTable {
+        display: flex;
+        justify-content: center;
+    }
+
+    div.displayAMT {
+        width: 40%;
+        /* height: 60%; */
+        /* margin: auto 10px; */
+    }
+
+    div.form {
+        display: flex;
+        justify-content: center;
+    }
+
+    div.btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    div.manageBalance {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    div.displayBalance {
+        text-align: center;
+    }
+
+    div.title {
+        font-size: large;
+        font-weight: 700;
+        color: #0D7C66;
+    }
+
+    input#budget-submit, input#expense-submit, button {
+        background-color: #D7C3F1;
+        color: #0D7C66;
+        border-radius: 10px;
+        width: 170px;
+        height: 25px;
+        font-weight: 700;
+    }
+
+    button {
+        width: 60px;
+        height: 20px;
+    }
+
+    div.displayAmt,
+    div.Icon,
+    div.title {
+        margin: 2px;
+    }
+
+    div.displayAmt {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    div.table-div {
+        border: 1px solid black;
+        width: 50%;
+        margin: 1px auto;
+        padding: 10px;
+        background-color: #BDE8CA;
+        border-radius: 10px;
+    }
+
+    img {
+        height: 50px;
+        width: 50px;
+    }
+
+    img.dollar {
+        width: 21px;
+        height: 21px;
+    }
+
+    span.error {
+        color: red;
+        font-size: small;
+    }
+</style>
+
+<body>
+    <h1>Budget App</h1>
+    <div class="form">
+        <div class="budget">
+            <div class="verticalCenter">
+                <h2>Budget</h2>
+                <form action="" id="budget-form"">
+                <div class=" field">
+                    Budget Amount: <br>
+                    <input type="number" name="budgetAmt" id="budgetAmt"><br>
+                    <span class="error" id="budgetErr"></span>
+            </div>
+            <br>
+            <div class="btn">
+                <input type="submit" value="Add Budget" id="budget-submit">
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="expenses">
+        <h2>Expense</h2>
+        <form action="" id="expense-form">
+            <div class="field">
+                Expense Name: <br>
+                <input type="text" name="expenseName" id="expenseName"><br>
+                <span class="error" id="expenseNameErr"></span>
+            </div>
+            <br>
+            <div class="field">
+                Expense Amount: <br>
+                <input type="number" name="expenseAmt" id="expenseAmt"><br>
+                <span class="error" id="expenseAmtErr"></span>
+            </div>
+            <br>
+            <div class="btn">
+                <input type="submit" value="Add Expense" id="expense-submit">
+            </div>
+        </form>
+    </div>
+    <div class="displayAMT">
+        <h2>Display Balance</h2>
+        <div class="manageBalance">
+            <div class="displayBalance">
+                <div class="title">BUDGET</div>
+                <div class="Icon"><img src="images/budget.png" alt="#budget" id="budgetImg"></div>
+                <div class="displayAmt"><img class="dollar" src="images/dollar-symbol.png" alt="$dollar"><span
+                        id="budgetAMT">0</span></div>
+            </div>
+            <div class="displayBalance">
+                <div class="title">EXPENES</div>
+                <div class="Icon"><img src="images/expenses.png" alt="#expense"></div>
+                <div class="displayAmt"><img class="dollar" src="images/dollar-symbol.png" alt="$dollar"><span
+                        id="ExpenseAMT">0</span></div>
+            </div>
+            <div class="displayBalance">
+                <div class="title">BALANCE</div>
+                <div class="Icon"><img src="images/wallet.png" alt="#wallet"></div>
+                <div class="displayAmt"><img class="dollar" src="images/dollar-symbol.png" alt="$dollar"><span
+                        id="BalanceAMT">0</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <br>
+    <div class="table-div">
+        <h2>Your Expenses List</h2>
+        <div class="expenseTable">
+            <table border="1">
+                <thead>
+                    <th>Expense Title</th>
+                    <th>Expense Amount</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="ExpenseTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/budget.js"></script>
+</body>
+
+</html>

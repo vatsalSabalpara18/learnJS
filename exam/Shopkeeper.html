@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopkeeper Managment</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        border: 2px solid black;
+    }
+    th, tr,td {
+        text-align: center;
+        border: 2px solid black;
+    }
+    span {
+        font-size: medium;
+        color: red;
+    }
+    div#root{
+        width: 50%;
+        margin: 1px auto;
+    }
+    div.form{
+        text-align: center;
+    }
+    div.table{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div id="root">
+        <div class="form">
+            <h1>Shopkeeper Management</h1>
+            <form action="" name="discountForm" onsubmit="handleSubmit()">
+                <select name="product" id="product">
+                    <option value="0">--Select Product--</option>
+                    <option value="AC">AC</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Washing Machine">Washing Machine</option>
+                    <option value="Laptop">Laptop</option>
+                </select><br><span id="productErr"></span><br>
+                <input type="number" name="discount" id="discount" placeholder="Enter Discount Here"><br><span id="discountErr"></span><br>
+                <input type="submit" id="submit" value="Add Product">
+            </form>
+        </div>
+        <br>
+        <div class="table">
+            <table border="1">
+                <thead>
+                    <th>Sr. No.</th>
+                    <th>Product Name</th>
+                    <th>Discount on Product</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/shopkeeper.js"></script>
+</body>
+</html>

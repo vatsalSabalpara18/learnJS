@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple form</title>
+</head>
+<style>
+    h2 {
+        text-align: center;
+    }
+    table {
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+    tr, td, th {
+        padding: 1px 10px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    div#root{
+        width: 50%;
+        margin: 5px auto;
+    }
+    div.form{
+        width: 30%;
+        margin: 2px auto;
+    }
+    div.btn,div.table {
+        display: flex;
+        justify-content: center;
+    }
+    span#nameErr, span#ageErr {
+        font-size: small;
+        color: red;
+    }
+    
+</style>
+<body>
+    <div id="root">
+        <h2>Simple Form</h2>
+        <div class="form">
+            <form name="simple-form" onsubmit="handleSubmit()">
+                <div class="name">
+                    <input type="text" name="name" placeholder="Enter the Name Here" id="name">
+                    <span id="nameErr"></span>
+                </div><br>
+                <div class="age">
+                    <input type="number" name="age" placeholder="Enter the Age Here" id="age">
+                    <span id="ageErr"></span>
+                </div><br>
+                <div class="btn">
+                    <input type="submit" id="submit">
+                </div>
+            </form>
+        </div><br>
+        <div class="table">
+            <table border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <script src="api.js"></script> -->
+    <script src="index.js"></script>
+</body>
+</html>

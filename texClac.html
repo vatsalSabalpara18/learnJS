@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tex Calculation</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 3px solid black;
+        }
+        th,td,tr {
+            border: 3px solid black;
+            font-weight: 400;
+        }
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Income Tax Slab</th>
+            <th>Income Tax Rate</th>
+            <th>Income Tax on Salary</th>
+        </tr>
+        <tr>
+            <td>UP to RS. 3 lakhs</td>
+            <td>NIll</td>
+            <td id="s1"></td>
+        </tr>
+        <tr>
+            <td>Rs.3 lakhs - Rs.6 lakhs</td>
+            <td>5%</td>
+            <td id="s2"></td>
+        </tr>
+        <tr>
+            <td>Rs.6 lakhs - Rs.9 lakhs </td>
+            <td>10%</td>
+            <td id="s3"></td>
+        </tr>
+        <tr>
+            <td>Rs.9 lakhs - Rs.12 lakhs</td>
+            <td>15%</td>
+            <td id="s4"></td>
+        </tr>
+        <tr>
+            <td>Rs.12 lakhs - Rs.15 lakhs</td>
+            <td>20%</td>
+            <td id="s5"></td>
+        </tr>
+        <tr>
+            <td>Above Rs.15 lakhs</td>
+            <td>30%</td>
+            <td id="s6"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Total Tax</td>
+            <td id="taxCalc"></td>
+        </tr>
+
+    </table>
+    <script src="JS/texClac.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Config</title>
+</head>
+<body>
+    <form action="" onsubmit="handleSubmit()">
+        Processor: 
+        <select name="Processor" id="Processor">
+            <option value="0">--Select Processor--</option>
+            <option value="i3">i3</option>
+            <option value="i5">i5</option>
+            <option value="i7">i7</option>
+        </select>
+        <br><br>
+        Ram:
+        <select name="Ram" id="Ram">
+            <option value="0">--Select Ram--</option>
+            <option value="4 GB">4 GB</option>
+            <option value="8 GB">8 GB</option>
+            <option value="12 GB">12 GB</option>
+        </select>
+        <br><br>
+        Memory: 
+        <select name="Memory" id="Memory">
+            <option value="0">--Select Memory--</option>
+            <option value="256 GB">256 GB</option>
+            <option value="512 GB">512 GB</option>
+            <option value="1 TB">1 TB</option>
+        </select>
+        <br><br>
+        Graphics Card: 
+        <select name="GC" id="GC">
+            <option value="0">--Select Graphics--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br><br>
+        <input type="submit" value="submit">
+        <br><br>
+        <span id="pcType"></span>
+        <br><br>
+        <span id="pcPrice"></span>
+    </form>
+    <script src="JS/pcConfig.js"></script>
+</body>
+</html>

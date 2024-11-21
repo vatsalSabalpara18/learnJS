@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    table{
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+    th, td, tr {
+        border: 1px solid black;
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+    }
+    div#root{
+        width: 50%;
+        margin: 1px auto;
+        text-align: center;
+    }
+    div.stdTable, div.reminderTable{
+        display: flex;
+        justify-content: center;
+    }
+    input.payFee{
+        width: 25%;
+    }
+</style>
+<body>
+    <div id="root">
+        <div class="stdForm">
+            <h1>Student Managment</h1>
+            <form action="" name="stdForm" id="stdForm">
+                <input type="text" name="stdName" id="stdName" placeholder="Enter Student Name"><br><br>
+                <select name="stdCoures" id="stdCoures">
+                    <option>--Select Coures--</option>
+                    <option value="Full Stack">Full Stack</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="React">React</option>
+                    <option value="Node">Node</option>
+                </select><br><br>
+                <input type="number" name="stdFees" id="stdFees" disabled placeholder="Coures Fee"><br><br>
+                <input type="text" name="stdEducation" id="stdEducation" placeholder="Enter Student Education"><br><br>
+                <input type="submit" value="Add Student">
+            </form>
+        </div>
+        <br>
+        <div class="stdTable">
+            <table border="1">
+                <thead>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Coures</th>
+                    <th>Coures Fee</th>
+                    <th>Education</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="stdTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <h1>Fees Reminder</h1>
+    <div class="reminderTable">
+        <table border="1">
+            <thead>
+                <th>Roll No.</th>
+                <th>Student Name</th>
+                <th>Pending Fees</th>
+                <th>Reminder Date</th>
+                <th>Pay</th>
+            </thead>
+            <tbody id="reminderTableBody"></tbody>
+        </table>
+    </div>
+    <!-- <script src="index.js"></script> -->
+     <script src="std.js"></script>
+</body>
+</html>

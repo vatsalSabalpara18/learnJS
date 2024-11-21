@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Your Food</title>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        border: 2px solid black;
+      }
+      tr,
+      td,
+      th {
+        border: 2px solid black;
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      #root {
+        display: flex;
+        justify-content: center;
+      }
+      #form {
+        width: 80%;
+        background-color: lightblue;
+        padding: 0px 50px;
+      }
+      #table {
+        display: flex;
+        justify-content: center;
+      }
+      #centerDiv {
+        display: flex;
+        justify-content: center;
+      }
+      #submit{
+        display: flex;
+        justify-content: center;
+      }
+      #friesError, #coldDrinksError, #couponCodeError {
+        color: red;
+        height: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="form">
+        <h1>Food Order System</h1>
+        <div id="centerDiv">
+          <form action="" onsubmit="orderFood()">
+          Food:
+          <input type="radio" name="food" id="Burger" value="100" /> Burger
+          <input type="radio" name="food" id="Pizza" value="240" /> Pizza
+          <input type="radio" name="food" id="Sandwich" value="150" /> Sandwich
+          <input type="radio" name="food" id="Combo" value="350" checked/> Combo
+          <br /><br />
+          Fries:
+          <input type="radio" name="Fries" id="yes" value="50" checked/> Yes
+          <input type="radio" name="Fries" id="no" value="0" /> No
+          <select name="selFries" id="selFries">
+            <option>--Select Countity--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <br />
+          <span id="friesError"></span>
+          <br />
+          Cold Drinks:
+          <input type="radio" name="coldDrinks" id="yes" value="yes" checked/> Yes
+          <input type="radio" name="coldDrinks" id="no" value="no" /> No
+          <select name="selColdDrinks" id="selColdDrinks">
+            <option>--Select ColdDrinks--</option>
+            <option value="Coca Cola">Coca cola</option>
+            <option value="Pepsi">Pepsi</option>
+            <option value="Sosyo">Sosyo</option>
+          </select>
+          <select name="selCountity" id="selCountity">
+            <option>--Select Countity--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select> 
+          <br />
+          <span id="coldDrinksError"></span>
+          <br />
+          Coupon Code:
+          <input type="text" name="coupon" id="coupon" />
+          <br />
+          <span id="couponCodeError"></span>
+          <br />
+          <div id="submit">
+            <input type="submit" value="Order Food" />
+          </div>
+        </form>
+        </div>
+        
+        <!-- <br /> -->
+        <!-- <span id="displayFood"></span>
+        <span id="displayFries"></span>
+        <span id="displayColdDrinks"></span>
+        <span id="totalDiscount"></span>
+        <span id="finalPrice"></span> -->
+      </div>
+    </div>
+    <br /><br />
+    <h1> Order Food Receipt</h1>
+    <div id="table">
+      <table border="1">
+        <tr>
+          <th>Ordered Food</th>
+          <th>Food Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+        <tr id="foodItem"></tr>
+        <tr id="friesItem"></tr>
+        <tr id="coldrinksItem"></tr>
+        <tr  id="totaPrice"></tr>
+        <tr id="coupCode"></tr>
+        <tr id="finalBill"></tr>
+      </table>
+    </div>
+    <script src="JS/orderFood.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Appointment</title>
+  </head>
+  <style>
+    body {
+      background-color: #b4d6cd;
+    }
+    select {
+      text-align: center;
+    }
+    body,
+    select {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: large;
+    }
+    label {
+      padding-right: 10px;
+      color: #03346e;
+      font-weight: 700;
+    }
+    table {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+    th,
+    tr,
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    th {
+      background-color: #03346e;
+      color: white;
+    }
+    h1 {
+      text-align: center;
+    }
+    #Ttable {
+      display: none;
+      width: 30%;
+    }
+    #dentalAppoinmentForm,
+    #disAppoTable {
+      display: none;
+    }
+    div.selappoinment {
+      display: flex;
+      justify-content: center;
+    }
+    div.disTtable, div.disTable, div.appoForm {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <h1>Dental Appointment System</h1>
+    <div class="selappoinment">
+      <label for="treatment">Select your Treatment:</label>
+      <select name="treatment" id="treatment" onchange="handleTreatment()">
+        <option>--select Treatment--</option>
+        <option value="Teeth Cleanings">Teeth Cleanings</option>
+        <option value="Fillings">Fillings</option>
+        <option value="Root Canal">Root Canal Treatment</option>
+        <option value="RCT + Cover">RCT + Cover</option>
+        <option value="Braces/Invisalign">Braces/Invisalign</option>
+      </select>
+    </div>
+    <br /><br />
+    <div class="disTtable">
+      <table border="1" id="Ttable">
+        <tr>
+          <th>Treatment</th>
+          <th>Seating</th>
+          <th>Costing</th>
+        </tr>
+        <tr id="distreatment"></tr>
+      </table>
+    </div>
+    <br />
+    <div class="appoForm">
+      <form onsubmit="handleSubmit()" id="dentalAppoinmentForm">
+        Select Appointment Date:
+        <input type="date" name="date" id="date" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <br /><br />
+    <div class="disTable">
+      <table id="disAppoTable">
+        <thead>
+          <tr>
+            <th>Treatment</th>
+            <th>Date of Treatment</th>
+            <th>Payment</th>
+          </tr>
+        </thead>
+        <tbody id="disAppoinment"></tbody>
+      </table>
+    </div>
+    <script src="JS/dentalAppoinment.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array Object</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 50%;
+        }
+        th, td, tr {
+            text-align: center;
+            border: 1px solid black;
+
+        }
+        div.table, div.form{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="tableDis"></div>
+    <div class="form">
+        <form action="" onsubmit="handleSubmit()">
+            <h1>Employee Information</h1>
+            Employee Name:
+            <input type="text" name="empName" id="empName"><br><br>
+            Employee Joining Date: 
+            <input type="date" name="empJD" id="empJD"><br><br>
+            Employee Salary: 
+            <input type="number" name="empSalary" id="empSalary"><br><br>
+            <input type="submit" value="Add Employee">
+        </form>
+    </div>
+    <br>
+    <div class="table">
+        <table border="1">
+            <thead>
+                <th>EmpId</th>
+                <th>Employee Name</th>
+                <th>Employee Salary</th>
+                <th>Employee Joining Date</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <script src="js/arrayObj.js"></script>
+</body>
+</html>
